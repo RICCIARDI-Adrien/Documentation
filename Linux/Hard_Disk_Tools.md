@@ -21,6 +21,15 @@ sudo blkdiscard --secure --verbose /dev/<disque dur>
 
 L'option `--secure` n'est peut-être pas disponible sur tous les contrôleurs de SSD.
 
+# Nettoyer un disque dur magnétique
+
+Démarrer la machine sur une image externe pour avoir un accès complet au disque dur à effacer.
+
+Effacer tous les blocs plusieurs fois pour atténuer la rémanence des informations :
+```
+sudo shred --verbose --zero /dev/<disque dur>
+```
+
 # Smartctl pour les SSD
 
 Installer le paquet `nvme-cli` (testé sous Debian 13).
