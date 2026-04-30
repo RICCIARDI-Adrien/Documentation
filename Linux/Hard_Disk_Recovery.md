@@ -8,7 +8,7 @@ Installer les paquets suivants :
 sudo apt install gddrescue kpartx testdisk
 ```
 
-## Extraire les données du disque physique
+## Extraire les données du disque physique
 
 * Brancher le disque à récupérer et éventuellement démonter son système de fichiers s'il se monte automatiquement.
 * Lancer la commande `sudo ddrescue -vv /dev/sdc /media/ar/Elements1To/disque.img ~/Bureau/journal`.
@@ -17,12 +17,12 @@ sudo apt install gddrescue kpartx testdisk
   * `~/Bureau/journal` est le fichier journal consignant le déroulement de la lecture du disque à récupérer (cela peut servir en cas d'erreur de lecture).
 * Faire une copie de sécurité de l'image récupérée avant de risquer de la modifier : `cp /media/ar/Elements1To/disque.img /media/ar/Elements1To/disque.img.bak`.
 
-## Trouver les partitions
+## Trouver les partitions
 
 * Lancer la commande `testdisk /log /debug /media/ar/Elements1To/disque.img` et suivre les instructions.
 * Réécrire la table des partitions dans l'image `disque.img` si nécessaire.
 
-## Accéder aux partitions
+## Accéder aux partitions
 
 * Lancer la commande `sudo kpartx -a -v /media/ar/Elements1To/disque.img` pour créer un device simulant un disque dur contenant l'image disque.
 * Si la commande ne retourne rien, c'est que la table des partitions est invalide.
@@ -48,7 +48,7 @@ smartmontools
 sg3-utils
 ```
 
-Test SMART : http://blog.shadypixel.com/monitoring-hard-drive-health-on-linux-with-smartmontools/
+Test SMART : http://blog.shadypixel.com/monitoring-hard-drive-health-on-linux-with-smartmontools/  
 Récupération des blocs endommagés : http://smartmontools.sourceforge.net/badblockhowto.html#bb
 
 http://www.thomas-krenn.com/en/wiki/Analyzing_a_Faulty_Hard_Disk_using_Smartctl
