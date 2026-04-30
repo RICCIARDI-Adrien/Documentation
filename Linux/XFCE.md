@@ -1,4 +1,4 @@
-## Configuration multi-écrans
+## Configuration multi-écrans
 
 Utiliser `arender` (ligne de commande) ou `lxrender` (graphique).
 
@@ -10,7 +10,7 @@ Testé sous Debian 9.
 
 Source : https://askubuntu.com/questions/544818/how-do-i-disable-automatic-screen-locking-in-xubuntu
 
-## Désactiver le son du bip sur haut-parleur PC
+## Désactiver le son du bip sur haut-parleur PC
 
 Ouvrir dans les paramètres, puis ouvrir Session et démarrage et se rendre dans l'onglet Démarrage automatique d'application.
 Ajouter une nouvelle application nommée "Arrêt bip" et contenant la commande `xset b off`.
@@ -29,7 +29,7 @@ Testé sur Debian 12.
 
 Source : https://gitlab.xfce.org/apps/ristretto/-/issues/50
 
-## Supprimer le tearing
+## Supprimer le tearing
 
 Testé sur Xubuntu 16.10 64 bits avec une GeForce 1070 utilisant les drivers propriétaires version 378 (ne fonctionne plus maintenant) :
 * Se rendre dans Paramètres/Peaufinage des fenêtres/Compositeur et désactiver le compositeur.
@@ -40,12 +40,12 @@ Méthode fonctionnant sur Xubuntu 19.04 64 bit avec une GeForce 1070 utilisant l
 
 Cependant, l'activation manuelle n'est pas persistante, alors voici la commande qui active les bonnes fonctionnalités : nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline=On, ForceFullCompositionPipeline = On }"
 
-## Le démon tumblerd empêche le démontage des disques
+## Le démon tumblerd empêche le démontage des disques
 
 Configurer tumbler à l'aide du fichier `/etc/xdg/tumbler/tumbler.rc`.  
 Il est possible de désactiver les plugins vidéo ou de les laisser activés tout en limitant la taille maximale des fichiers à traiter.
 
-## Utiliser le compositeur picom
+## Utiliser le compositeur picom
 
 Testé sur Debian Trixie et XFCE 4.20.
 
