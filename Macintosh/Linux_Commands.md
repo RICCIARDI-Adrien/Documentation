@@ -1,3 +1,5 @@
+# Commandes Linux pour les vieux Macintosh
+
 ## Désarchiver une archive StuffIt (.sit) sous Linux
 
 Installer le paquet Debian `unar` et taper `unar <archive.sit>`.
@@ -6,6 +8,12 @@ La commande `unar` fonctionne aussi pour les fichiers `.bin` créés avec StuffI
 
 Attention : tout le contenu de l'archive est extrait sous Linux, ce qui sépare les fichiers `.rsrc` des autres fichiers. MacOS n'est ensuite plus capable de reconnaître les autres fichiers car ils ne correspondent plus qu'à de la donnée brute (par exemple, des extensions système).
 Si possible, il vaut mieux installer StuffIt Expander sur MacOS et extraire les archives directement sur MacOS.
+
+## Afficher le contenu d'une archive StuffIt (.sit) sous Linux
+
+```
+lsar -L <archive.sit>
+```
 
 ## Convertir une archive StuffIt (.sit) récente en une version plus ancienne
 
